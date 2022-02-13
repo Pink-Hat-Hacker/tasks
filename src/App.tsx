@@ -1,5 +1,6 @@
 import React from "react";
 import "./App.css";
+import { Button } from "react-bootstrap";
 
 function App(): JSX.Element {
     return (
@@ -9,6 +10,7 @@ function App(): JSX.Element {
             </header>
             <p>Zoe Y. Valladares</p>
             <p>Hello World!</p>
+            <Button onClick={() => console.log("I am logged")}>Click Me</Button>
             <p>
                 Edit <code>src/App.tsx</code> and save. This page will
                 automatically reload.
