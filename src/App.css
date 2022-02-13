@@ -1,5 +1,23 @@
 .App {
     text-align: center;
+    background-color: #e5f7fc;
+}
+
+.list-title-caper{
+    text-align: center;
+    font-weight: bold;
+}
+.list-caper{
+    text-align: center;
+    list-style-position: inside;
+    font-weight: normal;
+}
+
+.rect{
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    margin:auto;
 }
 
 .App-logo {
