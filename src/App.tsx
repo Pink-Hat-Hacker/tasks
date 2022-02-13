@@ -8,7 +8,7 @@ function App(): JSX.Element {
             <header className="App-header">
                 UD CISC275 with React Hooks and TypeScript
             </header>
-            <p>Zoe Y. Valladares</p>
+            <p>Zoe Y. Valladares -- fixing my branching</p>
             <p>Hello World!</p>
             <Button onClick={() => console.log("I am logged")}>Click Me</Button>
             <p>
