@@ -30,7 +30,6 @@ function App(): JSX.Element {
             <br></br>
             <br></br>
             <p>by: Zoe Y. Valladares. Hello World!</p>
-            <p>Zoe Y. Valladares -- fixing my branching</p>
             <p>Hello World!</p>
             <Button onClick={() => console.log("I am logged")}>Click Me</Button>
             <br></br>
