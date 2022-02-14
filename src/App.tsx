@@ -9,7 +9,6 @@ function App(): JSX.Element {
             <header className="App-header">
                 UD CISC275 with React Hooks and TypeScript
             </header>
-<<<<<<< HEAD
             <br></br>
             <h1> TASK 3 </h1>
             <img
@@ -31,10 +30,8 @@ function App(): JSX.Element {
             <br></br>
             <br></br>
             <p>by: Zoe Y. Valladares. Hello World!</p>
-=======
             <p>Zoe Y. Valladares -- fixing my branching</p>
             <p>Hello World!</p>
->>>>>>> refs/remotes/origin/main
             <Button onClick={() => console.log("I am logged")}>Click Me</Button>
             <br></br>
             <br></br>
