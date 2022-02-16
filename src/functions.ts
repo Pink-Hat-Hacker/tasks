@@ -53,6 +53,7 @@ export function convertYesNo(word: string): boolean | null {
         return true;
     } else if (word == "NO" || word == "no") {
         return false;
+    } else {
+        return null;
     }
-    return null;
 }
