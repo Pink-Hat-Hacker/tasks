@@ -1,4 +1,4 @@
-import { stringify } from "querystring";
+//import { stringify } from "querystring";
 
 /**
  * Consumes a single temperature in Fahrenheit (a number) and converts to Celsius
