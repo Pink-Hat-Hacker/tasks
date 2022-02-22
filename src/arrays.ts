@@ -94,7 +94,12 @@ export function allRGB(colors: string[]): boolean {
  * And the array [] would become "0=0".
  */
 export function makeMath(addends: number[]): string {
-    return "";
+    if (addends.length === 0) {
+        addends = [...addends, 0];
+    }
+    const sums = addends.reduce((num: number, curr: number) => num + curr, 0);
+    const add = addends.join("+");
+    return sums + "=" + add;
 }
 
 /**
@@ -107,5 +112,29 @@ export function makeMath(addends: number[]): string {
  * And the array [1, 9, 7] would become [1, 9, 7, 17]
  */
 export function injectPositive(values: number[]): number[] {
-    return [];
+    //if none of the values are negative
+    if (values.some((val: number): boolean => val < 0) === false) {
+        const num_sum = values.reduce(
+            (total: number, num: number) => total + num,
+            0
+        );
+        const arr_1 = [...values, num_sum];
+        return arr_1;
+    }
+    //find negative
+    const ind = values.findIndex((val: number): boolean => val < 0);
+    const arr_2 = values.filter(
+        (val: number): boolean => values.indexOf(val) < ind
+    );
+    const num_sum = arr_2.reduce(
+        (total: number, num: number) => total + num,
+        0
+    );
+
+    //put in new array
+    const arr_3 = [...values];
+    arr_3.splice(ind + 1, 0, num_sum);
+    //console.log(arr_3);
+    return arr_3;
+    //return [0];
 }
