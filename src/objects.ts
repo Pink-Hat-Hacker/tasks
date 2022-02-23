@@ -45,6 +45,12 @@ export function isCorrect(question: Question, answer: string): boolean {
  * be exactly one of the options.
  */
 export function isValid(question: Question, answer: string): boolean {
+    return question.type === "short_answer_question"
+        ? true
+        : question.type === "multiple_choice_question" &&
+          question.options.some((o: string): boolean => o === answer)
+        ? true
+        : false;
     return false;
 }
 
