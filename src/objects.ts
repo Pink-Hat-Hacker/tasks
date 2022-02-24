@@ -1,4 +1,3 @@
-/* eslint-disable indent */
 //adding something just cuz
 import { Question, QuestionType } from "./interfaces/question";
 
@@ -47,13 +46,32 @@ export function isCorrect(question: Question, answer: string): boolean {
  * be exactly one of the options.
  */
 export function isValid(question: Question, answer: string): boolean {
+    /*
     return question.type === "short_answer_question"
         ? true
         : question.type === "multiple_choice_question" &&
           question.options.some((o: string): boolean => o === answer)
         ? true
         : false;
+    */
     //return false;
+    if (question.type === "short_answer_question") {
+        return true;
+    } else if (
+        question.type === "multiple_choice_question" &&
+        question.options.some((o: string): boolean => o === answer)
+    ) {
+        return true;
+    } else {
+        return false;
+    }
+    /*
+    return (question.type === "short_answer_question")
+        ? true
+        : (question.type === "multiple_choice_question" && question.options.some((o: string): boolean => o === answer))) 
+        ? true 
+        : false;
+    */
 }
 
 /**
