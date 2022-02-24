@@ -1,3 +1,4 @@
+/* eslint-disable indent */
 import { Question, QuestionType } from "./interfaces/question";
 
 /**
@@ -51,7 +52,7 @@ export function isValid(question: Question, answer: string): boolean {
           question.options.some((o: string): boolean => o === answer)
         ? true
         : false;
-    return false;
+    //return false;
 }
 
 /**
