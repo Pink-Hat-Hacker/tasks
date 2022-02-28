@@ -22,7 +22,7 @@ export function getNonEmptyQuestions(questions: Question[]): Question[] {
         (not_empty: Question): boolean =>
             not_empty.body !== "" &&
             not_empty.expected !== "" &&
-            not_empty.options !== []
+            not_empty.options !== null
     );
     return new_qs;
 }
