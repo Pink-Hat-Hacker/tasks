@@ -2,6 +2,169 @@
 > react-typescript-starter@0.1.0 test
 > react-scripts test "--coverage"
 
+FAIL src/nested.test.ts
+  ● Console
+
+    console.log
+      {
+        id: 1,
+        name: 'Question 1',
+        body: '',
+        type: 'multiple_choice_question',
+        options: [],
+        expected: '',
+        points: 1,
+        published: false
+      }
+
+      at findQuestion (src/nested.ts:42:13)
+
+    console.log
+      {
+        id: 47,
+        name: 'My New Question',
+        body: '',
+        type: 'multiple_choice_question',
+        options: [],
+        expected: '',
+        points: 1,
+        published: false
+      }
+
+      at findQuestion (src/nested.ts:42:13)
+
+    console.log
+      {
+        id: 2,
+        name: 'Question 2',
+        body: '',
+        type: 'short_answer_question',
+        options: [],
+        expected: '',
+        points: 1,
+        published: false
+      }
+
+      at findQuestion (src/nested.ts:42:13)
+
+    console.log
+      undefined
+
+      at findQuestion (src/nested.ts:42:13)
+
+    console.log
+      {
+        id: 1,
+        name: 'Addition',
+        body: 'What is 2+2?',
+        type: 'short_answer_question',
+        options: [],
+        expected: '4',
+        points: 1,
+        published: true
+      }
+
+      at findQuestion (src/nested.ts:42:13)
+
+    console.log
+      {
+        id: 2,
+        name: 'Letters',
+        body: 'What is the last letter of the English alphabet?',
+        type: 'short_answer_question',
+        options: [],
+        expected: 'Z',
+        points: 1,
+        published: false
+      }
+
+      at findQuestion (src/nested.ts:42:13)
+
+    console.log
+      {
+        id: 5,
+        name: 'Colors',
+        body: 'Which of these is a color?',
+        type: 'multiple_choice_question',
+        options: [ 'red', 'apple', 'firetruck' ],
+        expected: 'red',
+        points: 1,
+        published: true
+      }
+
+      at findQuestion (src/nested.ts:42:13)
+
+    console.log
+      {
+        id: 9,
+        name: 'Shapes',
+        body: 'What shape can you make with one line?',
+        type: 'multiple_choice_question',
+        options: [ 'square', 'triangle', 'circle' ],
+        expected: 'circle',
+        points: 2,
+        published: false
+      }
+
+      at findQuestion (src/nested.ts:42:13)
+
+    console.log
+      undefined
+
+      at findQuestion (src/nested.ts:42:13)
+
+    console.log
+      {
+        id: 478,
+        name: 'Students',
+        body: 'How many students are taking CISC275 this semester?',
+        type: 'short_answer_question',
+        options: [],
+        expected: '90',
+        points: 53,
+        published: true
+      }
+
+      at findQuestion (src/nested.ts:42:13)
+
+    console.log
+      undefined
+
+      at findQuestion (src/nested.ts:42:13)
+
+  ● Testing the Question[] functions › Testing the addEditQuestionOption function
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 3
+    + Received  + 1
+
+    @@ -23,13 +23,11 @@
+          "body": "Which of these is a color?",
+          "expected": "red",
+          "id": 5,
+          "name": "Colors",
+          "options": Array [
+    -       "newspaper",
+    -       "apple",
+    -       "firetruck",
+    +       "red",
+          ],
+          "points": 1,
+          "published": true,
+          "type": "multiple_choice_question",
+        },
+
+      1001 |             }
+      1002 |         ]);
+    > 1003 |         expect(editOption(SIMPLE_QUESTIONS, 5, 0, "newspaper")).toEqual([
+           |                                                                 ^
+      1004 |             {
+      1005 |                 id: 1,
+      1006 |                 name: "Addition",
+
+      at Object.<anonymous> (src/nested.test.ts:1003:65)
+
 PASS src/arrays.test.ts
 PASS src/objects.test.ts
 PASS src/HtmlCss.test.tsx
@@ -11,18 +174,20 @@ PASS src/App.test.tsx
 ----------------|---------|----------|---------|---------|-------------------
 File            | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 ----------------|---------|----------|---------|---------|-------------------
-All files       |   98.94 |      100 |   97.72 |   98.86 |                   
- src            |   98.94 |      100 |   97.72 |   98.86 |                   
+All files       |   99.34 |      100 |    98.7 |   99.28 |                   
+ src            |   99.34 |      100 |    98.7 |   99.28 |                   
   App.tsx       |   66.66 |      100 |   66.66 |   66.66 | 33                
   arrays.ts     |     100 |      100 |     100 |     100 |                   
   functions.ts  |     100 |      100 |     100 |     100 |                   
+  nested.ts     |     100 |      100 |     100 |     100 |                   
   objects.ts    |     100 |      100 |     100 |     100 |                   
  src/interfaces |       0 |        0 |       0 |       0 |                   
+  answer.ts     |       0 |        0 |       0 |       0 |                   
   question.ts   |       0 |        0 |       0 |       0 |                   
 ----------------|---------|----------|---------|---------|-------------------
 
-Test Suites: 6 passed, 6 total
-Tests:       33 passed, 33 total
+Test Suites: 1 failed, 6 passed, 7 total
+Tests:       1 failed, 48 passed, 49 total
 Snapshots:   0 total
-Time:        4.914 s
+Time:        6.723 s
 Ran all test suites.
