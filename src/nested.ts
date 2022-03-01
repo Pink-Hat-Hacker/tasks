@@ -1,5 +1,3 @@
-import { getValue } from "@testing-library/user-event/dist/utils";
-import { EndOfLineState } from "typescript";
 import { Answer } from "./interfaces/answer";
 import { Question, QuestionType } from "./interfaces/question";
 import { duplicateQuestion, makeBlankQuestion } from "./objects";
@@ -263,5 +261,6 @@ export function duplicateQuestionInArray(
         (q: Question): boolean => q.id === targetId
     );
     const q_2 = duplicateQuestion(newId, questions[quest]);
-    return new_arr.splice(quest + 1, 0, q_2);
+    new_arr.splice(quest + 1, 0, q_2);
+    return new_arr;
 }

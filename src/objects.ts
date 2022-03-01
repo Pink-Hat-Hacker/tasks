@@ -1,3 +1,4 @@
+//adding something just cuz
 import { Question, QuestionType } from "./interfaces/question";
 
 /**
@@ -30,7 +31,12 @@ export function makeBlankQuestion(
  * HINT: Look up the `trim` and `toLowerCase` functions.
  */
 export function isCorrect(question: Question, answer: string): boolean {
-    return false;
+    const a_q = {
+        ...question,
+        expected: question.expected.trim().toLowerCase()
+    };
+    const a_a = answer.trim().toLowerCase();
+    return a_q.expected === a_a ? true : false;
 }
 
 /**
@@ -40,7 +46,32 @@ export function isCorrect(question: Question, answer: string): boolean {
  * be exactly one of the options.
  */
 export function isValid(question: Question, answer: string): boolean {
-    return false;
+    /*
+    return question.type === "short_answer_question"
+        ? true
+        : question.type === "multiple_choice_question" &&
+          question.options.some((o: string): boolean => o === answer)
+        ? true
+        : false;
+    */
+    //return false;
+    if (question.type === "short_answer_question") {
+        return true;
+    } else if (
+        question.type === "multiple_choice_question" &&
+        question.options.some((o: string): boolean => o === answer)
+    ) {
+        return true;
+    } else {
+        return false;
+    }
+    /*
+    return (question.type === "short_answer_question")
+        ? true
+        : (question.type === "multiple_choice_question" && question.options.some((o: string): boolean => o === answer))) 
+        ? true 
+        : false;
+    */
 }
 
 /**
@@ -50,7 +81,9 @@ export function isValid(question: Question, answer: string): boolean {
  * name "My First Question" would become "9: My First Q".
  */
 export function toShortForm(question: Question): string {
-    return "";
+    const num_ten = question.name.substring(0, 10);
+    return question.id + ": " + num_ten;
+    //return "";
 }
 
 /**
@@ -71,7 +104,14 @@ export function toShortForm(question: Question): string {
  * Check the unit tests for more examples of what this looks like!
  */
 export function toMarkdown(question: Question): string {
-    return "";
+    let name_s = "# " + question.name + "\n" + question.body;
+    if (question.type === "multiple_choice_question") {
+        question.options.map(
+            (o: string): string => (name_s = name_s + "\n- " + o)
+        );
+    }
+    return name_s;
+    //return "";
 }
 
 /**
@@ -79,7 +119,8 @@ export function toMarkdown(question: Question): string {
  * `newName`.
  */
 export function renameQuestion(question: Question, newName: string): Question {
-    return question;
+    return { ...question, name: newName };
+    //return question;
 }
 
 /**
@@ -88,7 +129,9 @@ export function renameQuestion(question: Question, newName: string): Question {
  * published; if it was published, now it should be not published.
  */
 export function publishQuestion(question: Question): Question {
-    return question;
+    return question.published === false
+        ? { ...question, published: true }
+        : { ...question, published: false };
 }
 
 /**
@@ -115,7 +158,11 @@ export function duplicateQuestion(id: number, oldQuestion: Question): Question {
  * Check out the subsection about "Nested Fields" for more information.
  */
 export function addOption(question: Question, newOption: string): Question {
-    return question;
+    const new_q = {
+        ...question,
+        options: [...question.options, newOption]
+    };
+    return new_q;
 }
 
 /**
@@ -132,5 +179,11 @@ export function mergeQuestion(
     contentQuestion: Question,
     { points }: { points: number }
 ): Question {
-    return contentQuestion;
+    return {
+        ...contentQuestion,
+        id: id,
+        name: name,
+        points: points,
+        published: false
+    };
 }
