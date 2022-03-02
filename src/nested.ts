@@ -281,3 +281,5 @@ export function duplicateQuestionInArray(
     new_arr.splice(quest + 1, 0, q_2);
     return new_arr;
 }
+
+//adding change why does this not work!!
