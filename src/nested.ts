@@ -223,27 +223,45 @@ export function changeQuestionTypeById(
  * Remember, if a function starts getting too complicated, think about how a helper function
  * can make it simpler! Break down complicated tasks into little pieces.
  */
+
 export function editOption(
     questions: Question[],
     targetId: number,
     targetOptionIndex: number,
     newOption: string
 ) {
-    return questions.map((q: Question): Question => {
-        if (q.id === targetId) {
-            if (targetOptionIndex === -1) {
-                return { ...q, options: [...q.options, newOption] };
-            } else {
-                const arr_2 = [...q.options];
-                return {
-                    ...q,
-                    options: arr_2.splice(targetOptionIndex, 1, newOption)
-                };
-            }
-        } else {
-            return { ...q };
-        }
-    });
+    let curr;
+    if (targetOptionIndex === -1) {
+        curr = questions.map(
+            (q: Question): Question =>
+                q.id === targetId
+                    ? { ...q, options: [...q.options, newOption] }
+                    : { ...q }
+        );
+    } else {
+        let temp;
+        curr = questions.map(
+            (q: Question): Question =>
+                helpEdOpt(q, targetId, targetOptionIndex, newOption)
+        );
+    }
+    return curr;
+}
+
+export function helpEdOpt(
+    q: Question,
+    targetId: number,
+    targetOptionIndex: number,
+    newOption: string
+): Question {
+    let temp;
+    if (q.id === targetId) {
+        temp = { ...q, options: [...q.options] };
+        temp.options.splice(targetOptionIndex, 1, newOption);
+    } else {
+        temp = { ...q };
+    }
+    return temp;
 }
 /***
  * Consumes an array of questions, and produces a new array based on the original array.
