@@ -2,7 +2,7 @@
 > react-typescript-starter@0.1.0 test
 > react-scripts test "--coverage"
 
-FAIL src/nested.test.ts
+PASS src/nested.test.ts
   ● Console
 
     console.log
@@ -132,39 +132,6 @@ FAIL src/nested.test.ts
 
       at findQuestion (src/nested.ts:42:13)
 
-  ● Testing the Question[] functions › Testing the addEditQuestionOption function
-
-    expect(received).toEqual(expected) // deep equality
-
-    - Expected  - 3
-    + Received  + 1
-
-    @@ -23,13 +23,11 @@
-          "body": "Which of these is a color?",
-          "expected": "red",
-          "id": 5,
-          "name": "Colors",
-          "options": Array [
-    -       "newspaper",
-    -       "apple",
-    -       "firetruck",
-    +       "red",
-          ],
-          "points": 1,
-          "published": true,
-          "type": "multiple_choice_question",
-        },
-
-      1001 |             }
-      1002 |         ]);
-    > 1003 |         expect(editOption(SIMPLE_QUESTIONS, 5, 0, "newspaper")).toEqual([
-           |                                                                 ^
-      1004 |             {
-      1005 |                 id: 1,
-      1006 |                 name: "Addition",
-
-      at Object.<anonymous> (src/nested.test.ts:1003:65)
-
 PASS src/arrays.test.ts
 PASS src/objects.test.ts
 PASS src/HtmlCss.test.tsx
@@ -174,8 +141,8 @@ PASS src/App.test.tsx
 ----------------|---------|----------|---------|---------|-------------------
 File            | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 ----------------|---------|----------|---------|---------|-------------------
-All files       |   99.34 |      100 |    98.7 |   99.28 |                   
- src            |   99.34 |      100 |    98.7 |   99.28 |                   
+All files       |   99.35 |      100 |   98.73 |    99.3 |                   
+ src            |   99.35 |      100 |   98.73 |    99.3 |                   
   App.tsx       |   66.66 |      100 |   66.66 |   66.66 | 33                
   arrays.ts     |     100 |      100 |     100 |     100 |                   
   functions.ts  |     100 |      100 |     100 |     100 |                   
@@ -186,8 +153,8 @@ All files       |   99.34 |      100 |    98.7 |   99.28 |
   question.ts   |       0 |        0 |       0 |       0 |                   
 ----------------|---------|----------|---------|---------|-------------------
 
-Test Suites: 1 failed, 6 passed, 7 total
-Tests:       1 failed, 48 passed, 49 total
+Test Suites: 7 passed, 7 total
+Tests:       49 passed, 49 total
 Snapshots:   0 total
-Time:        6.723 s
+Time:        4.487 s
 Ran all test suites.
