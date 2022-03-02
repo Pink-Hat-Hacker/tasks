@@ -239,7 +239,6 @@ export function editOption(
                     : { ...q }
         );
     } else {
-        let temp;
         curr = questions.map(
             (q: Question): Question =>
                 helpEdOpt(q, targetId, targetOptionIndex, newOption)
