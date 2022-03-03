@@ -39,7 +39,7 @@ export function findQuestion(
     const id_q = questions.find(
         (find_id: Question): boolean => id === find_id.id
     );
-    console.log(id_q);
+    //console.log(id_q);
     if (id_q) {
         return id_q;
     }
