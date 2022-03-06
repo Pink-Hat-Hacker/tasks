@@ -24,7 +24,7 @@ export function StartAttempt(): JSX.Element {
     //start and stop switch
     function flipStartStop(): void {
         setProgress(inProgress === false ? true : false);
-        setValue(inProgress === true ? value - 1 : value);
+        //setValue(inProgress === true ? value - 1 : value);
     }
     return (
         <div>
@@ -33,7 +33,10 @@ export function StartAttempt(): JSX.Element {
             </div>
             <div>
                 <Button
-                    onClick={() => flipStartStop()}
+                    onClick={() => {
+                        flipStartStop();
+                        setValue(value - 1);
+                    }}
                     disabled={inProgress || value === 0}
                 >
                     Start Quiz

@@ -39,18 +39,30 @@ export function CycleHoliday(): JSX.Element {
         }
     }
     //
-    function emoji(): void {
+    function emoji(): string {
         if (holi === "New Year") {
-            return 🎆; 
+            return "🎆";
         } else if (holi === "Chinese New Year") {
-            return 🧧; 
+            return "🧧";
         } else if (holi === "Halloween") {
-            return 🎃; 
+            return "🎃";
         } else if (holi === "Thanksgiving") {
-            return 🦃;
+            return "🦃";
         } else {
-            return 🎄;
+            return "🎄";
         }
     }
-    return <div>Cycle Holiday</div>;
+    return (
+        <div>
+            <div>Cycle Holiday</div>
+            <div>
+                <span> Holiday: {holi} </span>
+                <span> {emoji()} </span>
+            </div>
+            <div>
+                <Button onClick={alpha}>Advance by Alphabet</Button>
+                <Button onClick={byDate}>Advance by Year</Button>
+            </div>
+        </div>
+    );
 }
