@@ -1,7 +1,11 @@
 import React from "react";
 import "./App.css";
-import { Button, Col, Container, Row } from "react-bootstrap";
-import Caper from "./assets/caper.jpeg";
+import { ChangeType } from "./components/ChangeType";
+import { RevealAnswer } from "./components/RevealAnswer";
+import { StartAttempt } from "./components/StartAttempt";
+import { TwoDice } from "./components/TwoDice";
+import { CycleHoliday } from "./components/CycleHoliday";
+import { Counter } from "./components/Counter";
 
 function App(): JSX.Element {
     return (
@@ -9,45 +13,18 @@ function App(): JSX.Element {
             <header className="App-header">
                 UD CISC275 with React Hooks and TypeScript
             </header>
-            <br></br>
-            <h1> TASK 3 </h1>
-            <img
-                src={Caper}
-                alt="A picture of my dog Caper the Escaper (a husky mix)"
-            />
-            <br></br>
-            <div className="list-title-caper">
-                Why Caper is a cool dog:
-                <ol className="list-caper">
-                    <li>He can open a gate by himself</li>
-                    <li>He does not bark</li>
-                    <li>He sheds everywhere... :/</li>
-                </ol>
-            </div>
-            <Button onClick={() => console.log("Hello World!")}>
-                Log Hello World
-            </Button>
-            <br></br>
-            <br></br>
-            <p>by: Zoe Y. Valladares. Hello World!</p>
-            <Button onClick={() => console.log("I am logged")}>Click Me</Button>
-            <br></br>
-            <br></br>
-            {/* Task 3 additinal
-            two column layout
-            red rectangle in each column */}
-            <div className="rect">
-                <Container>
-                    <Row>
-                        <Col>Col 1</Col>
-                        <Col>Col 2</Col>
-                    </Row>
-                </Container>
-            </div>
-            <p>
-                Edit <code>src/App.tsx</code> and save. This page will
-                automatically reload.
-            </p>
+            <hr></hr>
+            <Counter></Counter>
+            <hr />
+            <RevealAnswer></RevealAnswer>
+            <hr />
+            <StartAttempt></StartAttempt>
+            <hr />
+            <TwoDice></TwoDice>
+            <hr />
+            <ChangeType></ChangeType>
+            <hr />
+            <CycleHoliday></CycleHoliday>
         </div>
     );
 }
