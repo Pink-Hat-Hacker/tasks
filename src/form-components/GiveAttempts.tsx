@@ -20,11 +20,14 @@ If the user attempts to request an invalid amount
 then do not change their number of attempts.
 When the user is out of attempts, the use button should be disabled
 */
+type ChangeEvent = React.ChangeEvent<
+    HTMLTextAreaElement | HTMLInputElement | HTMLSelectElement
+>;
 
 export function GiveAttempts(): JSX.Element {
     const [numAttempts, setAttempts] = useState<string>("3");
-    const reqAttempts = parseInt(numAttempts) - 1 || 0;
-    //const [reqAttempts, setReqAttempts] = useState<number>(0);
+    //const reqAttempts = parseInt(numAttempts) - 1 || 0;
+    const [reqAttempts, setReqAttempts] = useState<number>(0);
     return (
         <div>
             <h3>Give Attempts: {numAttempts}</h3>
@@ -32,12 +35,21 @@ export function GiveAttempts(): JSX.Element {
                 <Form.Label>Request Attempts:</Form.Label>
                 <Form.Control
                     type="number"
-                    value={numAttempts}
-                    onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
-                        setAttempts(event.target.value)
+                    value={reqAttempts}
+                    onChange={(event: ChangeEvent) =>
+                        setAttempts(parseInt(event.target.value) || 0)
                     }
                 />
             </Form.Group>
+        </div>
+        <div>
+            <!--Button stuff and stuff-->
+            <Button onClick={() => setAttempts(numAttempts - 1)} disabled={numAttempts === 0}>
+                Use Attempt
+            </Button>
+            <Button onClick={() => setAttempts(numAttempts - reqAttempts)}>
+                Get Attempt
+            </Button>
         </div>
     );
 }
