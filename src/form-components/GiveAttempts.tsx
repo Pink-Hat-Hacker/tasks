@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Form } from "react-bootstrap";
 
 /*
 The GiveAttempts component simulates a user taking a quiz with a 
@@ -21,9 +22,22 @@ When the user is out of attempts, the use button should be disabled
 */
 
 export function GiveAttempts(): JSX.Element {
+    const [numAttempts, setAttempts] = useState<string>("3");
+    const reqAttempts = parseInt(numAttempts) - 1 || 0;
+    //const [reqAttempts, setReqAttempts] = useState<number>(0);
     return (
         <div>
-            <h3>Give Attempts</h3>
+            <h3>Give Attempts: {numAttempts}</h3>
+            <Form.Group controlId="attempt_form">
+                <Form.Label>Request Attempts:</Form.Label>
+                <Form.Control
+                    type="number"
+                    value={numAttempts}
+                    onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
+                        setAttempts(event.target.value)
+                    }
+                />
+            </Form.Group>
         </div>
     );
 }
