@@ -26,31 +26,33 @@ type ChangeEvent = React.ChangeEvent<
 >;
 
 export function GiveAttempts(): JSX.Element {
-    const [numAttempts, setAttempts] = useState<string>("3");
+    const [numAttempts, setAttempts] = useState<number>(3);
     //const reqAttempts = parseInt(numAttempts) - 1 || 0;
     const [reqAttempts, setReqAttempts] = useState<number>(0);
     return (
         <div>
             <h3>Give Attempts: {numAttempts}</h3>
-            <Form.Group controlId="attempt_form">
-                <Form.Label>Request Attempts:</Form.Label>
-                <Form.Control
-                    type="number"
-                    value={reqAttempts}
-                    onChange={(event: ChangeEvent) =>
-                        setReqAttempts(parseInt(event.target.value) || 0)
-                    }
-                />
-            </Form.Group>
+            <div>
+                <Form.Group controlId="attempt_form">
+                    <Form.Label>Request Attempts:</Form.Label>
+                    <Form.Control
+                        type="number"
+                        value={reqAttempts}
+                        onChange={(event: ChangeEvent) =>
+                            setReqAttempts(parseInt(event.target.value) || 0)
+                        }
+                    />
+                </Form.Group>
+            </div>
             <div>
                 <Button
                     onClick={() => setAttempts(numAttempts - 1)}
                     disabled={numAttempts === 0}
                 >
-                    Use Attempt
+                    Use
                 </Button>
-                <Button onClick={() => setAttempts(numAttempts - reqAttempts)}>
-                    Get Attempt
+                <Button onClick={() => setAttempts(numAttempts + reqAttempts)}>
+                    Gain
                 </Button>
             </div>
         </div>
