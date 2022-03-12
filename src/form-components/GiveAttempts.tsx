@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Form } from "react-bootstrap";
+import { Button } from "react-bootstrap";
 
 /*
 The GiveAttempts component simulates a user taking a quiz with a 
@@ -37,19 +38,21 @@ export function GiveAttempts(): JSX.Element {
                     type="number"
                     value={reqAttempts}
                     onChange={(event: ChangeEvent) =>
-                        setAttempts(parseInt(event.target.value) || 0)
+                        setReqAttempts(parseInt(event.target.value) || 0)
                     }
                 />
             </Form.Group>
-        </div>
-        <div>
-            <!--Button stuff and stuff-->
-            <Button onClick={() => setAttempts(numAttempts - 1)} disabled={numAttempts === 0}>
-                Use Attempt
-            </Button>
-            <Button onClick={() => setAttempts(numAttempts - reqAttempts)}>
-                Get Attempt
-            </Button>
+            <div>
+                <Button
+                    onClick={() => setAttempts(numAttempts - 1)}
+                    disabled={numAttempts === 0}
+                >
+                    Use Attempt
+                </Button>
+                <Button onClick={() => setAttempts(numAttempts - reqAttempts)}>
+                    Get Attempt
+                </Button>
+            </div>
         </div>
     );
 }
