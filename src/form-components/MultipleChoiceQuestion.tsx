@@ -36,9 +36,14 @@ export function MultipleChoiceQuestion({
                         setAnswer(event.target.value)
                     }
                 >
-                    <option value="1">A</option>
+                    {/* <option value="1">A</option>
                     <option value="2">B</option>
-                    <option value="3">C</option>
+                    <option value="3">C</option> */}
+                    {options.map((choice: string) => (
+                        <option key={choice} value={choice}>
+                            {choice}
+                        </option>
+                    ))}
                 </Form.Select>
             </Form.Group>
             {expectedAnswer === answer && <span>✔️</span>}
