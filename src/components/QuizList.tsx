@@ -2,7 +2,8 @@ import React from "react";
 import { Quizzer } from "../quizzer/Quizzer";
 import { Quiz } from "../interfaces/quiz";
 import { Stack } from "react-bootstrap";
-//import QuizView
+import { QuizView } from "./QuizView";
+import { QuizEditor } from "./QuizEditor";
 
 export function QuizList({
     quiz,
