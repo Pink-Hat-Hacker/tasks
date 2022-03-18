@@ -7,7 +7,7 @@ import { QuizEditor } from "./QuizEditor";
 export function QuizView({
     quiz,
     deleteQuiz,
-    editQuiz,
+    editQuiz
 }: {
     quiz: Quiz;
     deleteQuiz: (id: string) => void;
@@ -30,9 +30,16 @@ export function QuizView({
         <Container>
             <Row>
                 <Col>
-                    <h3>(quiz.title)</h3>
+                    <h3>{quiz.title}</h3>
+                    {/**Number of Questions probably */}
+                </Col>
+            </Row>
+            <Row>
+                <Col>
+                    <p>{quiz.decription}</p>
+                    {/**Question List */}
                 </Col>
             </Row>
         </Container>
-    )
+    );
 }

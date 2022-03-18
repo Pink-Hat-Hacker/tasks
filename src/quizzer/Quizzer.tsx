@@ -33,7 +33,7 @@ export function Quizzer(): JSX.Element {
 
     return (
         <div className="Quizzer">
-            <header className="App-header"> Car Quizzes</header>
+            <header className="App-header">Quizzes</header>
             <div>
                 {/*all quiz list information*/}
                 {/* <QuizList></QuizList> */}
