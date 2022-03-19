@@ -1,12 +1,13 @@
 import React, { useState } from "react";
-import { Button, Container, Row, Col, Form } from "react-bootstrap";
+//import { Button, Container, Row, Col, Form } from "react-bootstrap";
+import { Container, Row, Col, Form } from "react-bootstrap";
 import { Quiz } from "../interfaces/quiz";
 
 export function QuizEditor({
-    changeEditing,
-    quiz,
-    editQuiz,
-    deleteQuiz
+    //changeEditing,
+    //editQuiz,
+    //deleteQuiz
+    quiz
 }: {
     changeEditing: () => void;
     quiz: Quiz;
@@ -17,19 +18,19 @@ export function QuizEditor({
     const [numQs, setNumQs] = useState<string>(quiz.numQuestions.toString);
     const [description, setDescription] = useState<string>(quiz.decription);
 
-    function save() {
-        editQuiz(quiz.id, {
-            ...quiz,
-            title: title,
-            numQuestions: parseInt(numQs) || 0,
-            decription: description
-        });
-        changeEditing();
-    }
+    // function save() {
+    //     editQuiz(quiz.id, {
+    //         ...quiz,
+    //         title: title,
+    //         numQuestions: parseInt(numQs) || 0,
+    //         decription: description
+    //     });
+    //     changeEditing();
+    // }
 
-    function cancel() {
-        changeEditing();
-    }
+    // function cancel() {
+    //     changeEditing();
+    // }
 
     return (
         <Container>

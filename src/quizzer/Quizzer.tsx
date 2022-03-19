@@ -1,5 +1,5 @@
 import React from "react";
-import { Quiz } from "../interfaces/quiz";
+//import { Quiz } from "../interfaces/quiz";
 import sketch from "./assets/quizzer_sketch.png";
 /** What is a Quiz
  * Title
