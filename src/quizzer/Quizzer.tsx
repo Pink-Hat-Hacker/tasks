@@ -35,6 +35,12 @@ export function Quizzer(): JSX.Element {
     return (
         <div className="Quizzer">
             <header className="App-header">Quizzes</header>
+            <ul>
+                <li>Sketch</li>
+                <li>Outline for quiz object</li>
+                <li>Quiz editor template</li>
+                <li>Attributes for Quiz List</li>
+            </ul>
             <div>
                 {/*all quiz list information*/}
                 {/* <QuizList></QuizList> */}
