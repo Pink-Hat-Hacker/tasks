@@ -1,5 +1,6 @@
 import React from "react";
 import { Quiz } from "../interfaces/quiz";
+import sketch from "./assets/quizzer_sketch.png";
 /** What is a Quiz
  * Title
  * Description
@@ -44,7 +45,7 @@ export function Quizzer(): JSX.Element {
                 <AddQuizModal></AddQuizModal>
                 */}
             </div>
-            {/*<img src={ApplicationSketch}></img>*/}
+            <img src={sketch} alt="App Sketch"></img>
         </div>
     );
 }
