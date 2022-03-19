@@ -1,14 +1,14 @@
 import React from "react";
-import { Quizzer } from "../quizzer/Quizzer";
+//import { Quizzer } from "../quizzer/Quizzer";
 import { Quiz } from "../interfaces/quiz";
 import { Stack } from "react-bootstrap";
-import { QuizView } from "./QuizView";
-import { QuizEditor } from "./QuizEditor";
+//import { QuizView } from "./QuizView";
+//import { QuizEditor } from "./QuizEditor";
 
 export function QuizList({
-    quiz,
-    deleteQuiz,
-    editQuiz
+    // deleteQuiz,
+    // editQuiz
+    quiz
 }: {
     quiz: Quiz[];
     deleteQuiz: (id: string) => void;
