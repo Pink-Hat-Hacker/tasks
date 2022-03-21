@@ -51,7 +51,7 @@ export function Quizzer(): JSX.Element {
                 <AddQuizModal></AddQuizModal>
                 */}
             </div>
-            <img src={sketch} alt="App Sketch"></img>
+            <img src={sketch} alt="App Sketch" height="750px"></img>
         </div>
     );
 }
