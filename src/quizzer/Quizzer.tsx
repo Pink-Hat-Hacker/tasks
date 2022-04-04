@@ -1,12 +1,22 @@
-import React from "react";
-//import { Quiz } from "../interfaces/quiz";
+import React, { useState } from "react";
+import { Quiz } from "../interfaces/quiz";
 import sketch from "./assets/quizzer_sketch.png";
+import { QuizList } from "../components/QuizList";
+import { cars } from "../data/cars.json";
 /** What is a Quiz
  * Title
  * Description
  * number of questions
  */
+const QUIZZES = cars.map(
+    (quiz): Quiz => ({
+        ...quiz
+    })
+);
+
 export function Quizzer(): JSX.Element {
+    //state
+    const [quiz, setQuizzes] = useState<Quiz[]>(QUIZZES);
     //need to add a quiz
     /* function addQuiz(newQuiz: Quiz){
         const existing = quiz.find((q: Quiz): boolean => q.id === newQuiz.id);
@@ -16,9 +26,9 @@ export function Quizzer(): JSX.Element {
     } */
 
     //need to delete a quiz
-    /* function deleteQuiz(id: string){
+    function deleteQuiz(id: string) {
         setQuizzes(quiz.filter((q: Quiz): boolean => q.id != id));
-    } */
+    }
 
     //edit questions of quiz
     /* function editQuiz(id: string, newQuiz: Quiz) {
@@ -42,14 +52,10 @@ export function Quizzer(): JSX.Element {
                 <li>Attributes for Quiz List</li>
             </ul>
             <div>
-                {/*all quiz list information*/}
-                {/* <QuizList></QuizList> */}
-            </div>
-            <div>
-                {/*
-                <Button>Add New Quiz</Button>
-                <AddQuizModal></AddQuizModal>
-                */}
+                <QuizList>
+                    quizzes={quiz}
+                    deleteQuiz={deleteQuiz}
+                </QuizList>
             </div>
             <img src={sketch} alt="App Sketch" height="750px"></img>
         </div>

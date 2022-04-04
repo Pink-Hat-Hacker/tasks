@@ -2,12 +2,11 @@ import React from "react";
 //import { Quizzer } from "../quizzer/Quizzer";
 import { Quiz } from "../interfaces/quiz";
 import { Stack } from "react-bootstrap";
-//import { QuizView } from "./QuizView";
-//import { QuizEditor } from "./QuizEditor";
+import { QuizView } from "./QuizView";
 
 export function QuizList({
-    // deleteQuiz,
-    // editQuiz
+    deleteQuiz,
+    editQuiz,
     quiz
 }: {
     quiz: Quiz[];
@@ -18,11 +17,11 @@ export function QuizList({
         <Stack gap={3}>
             {quiz.map((q: Quiz) => (
                 <div key={q.id} className="bg-light border m-2 p-2">
-                    {/* <QuizView
+                    <QuizView
                         quiz={q}
                         deleteQuiz={deleteQuiz}
                         editQuiz={editQuiz}
-                    ></QuizView> */}
+                    ></QuizView>
                 </div>
             ))}
         </Stack>
