@@ -1,5 +1,5 @@
 import React from "react";
-//import "./App.css";
+import "./App.css";
 // import { ChangeType } from "./components/ChangeType";
 // import { RevealAnswer } from "./components/RevealAnswer";
 // import { StartAttempt } from "./components/StartAttempt";
@@ -16,20 +16,18 @@ import React from "react";
 // import { MultipleChoiceQuestion } from "./form-components/MultipleChoiceQuestion";
 // import { ChangeColor } from "./form-components/ChangeColor";
 import { Quizzer } from "./quizzer/Quizzer";
-import { HiddenTask } from "./quizzer/HiddenTasks";
+import { HideComponents } from "./components/HideComponents";
 
 function App(): JSX.Element {
     return (
-        <div>
-            <Quizzer></Quizzer>
-            <HiddenTask></HiddenTask>
-            {/* 
-            <div className="App">
+        <div className="App">
             <header className="App-header">
                 UD CISC275 with React Hooks and TypeScript
             </header>
+            <Quizzer></Quizzer>
             <hr></hr>
-            <DoubleHalf></DoubleHalf>
+            <HideComponents></HideComponents>
+            {/* <DoubleHalf></DoubleHalf>
             <CheckAnswer expectedAnswer="42"></CheckAnswer>
             <hr></hr>
             <GiveAttempts></GiveAttempts>
@@ -43,7 +41,7 @@ function App(): JSX.Element {
                 expectedAnswer="b"
             ></MultipleChoiceQuestion>
             <hr></hr>
-            *<DoubleHalf></DoubleHalf>*
+            <DoubleHalf></DoubleHalf>
             <hr></hr>
             <ChooseTeam></ChooseTeam>
             <hr></hr>
