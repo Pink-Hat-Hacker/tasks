@@ -50,11 +50,82 @@ FAIL src/quizzer/Quizzer.test.tsx
             [36m<li>[39m
               [0mAttributes for Quiz List[0m
             [36m</li>[39m
+            [36m<li>[39m
+              [0mHide old components[0m
+            [36m</li>[39m
           [36m</ul>[39m
+          [36m<div>[39m
+            [36m<div>[39m
+              [36m<label[39m
+                [33mclass[39m=[32m"form-label"[39m
+              [36m>[39m
+                [0mSelect a Quiz[0m
+              [36m</label>[39m
+              [36m<select[39m
+                [33mclass[39m=[32m"form-select"[39m
+              [36m>[39m
+                [36m<option[39m
+                  [33mvalue[39m=[32m"JDM Cars"[39m
+                [36m>[39m
+                  [0mJDM Cars[0m
+                [36m</option>[39m
+                [36m<option[39m
+                  [33mvalue[39m=[32m"American Cars"[39m
+                [36m>[39m
+                  [0mAmerican Cars[0m
+                [36m</option>[39m
+                [36m<option[39m
+                  [33mvalue[39m=[32m"Euro Cars"[39m
+                [36m>[39m
+                  [0mEuro Cars[0m
+                [36m</option>[39m
+              [36m</select>[39m
+            [36m</div>[39m
+          [36m</div>[39m
+          [36m<div>[39m
+            [36m<div>[39m
+              [36m<label[39m
+                [33mclass[39m=[32m"form-label"[39m
+              [36m>[39m
+                [0mJDM Cars[0m
+              [36m</label>[39m
+              [36m<span>[39m
+                [0mWhat does [JDM] stand for?[0m
+              [36m</span>[39m
+              [36m<select[39m
+                [33mclass[39m=[32m"form-select"[39m
+              [36m>[39m
+                [36m<option[39m
+                  [33mvalue[39m=[32m"Select an answer"[39m
+                [36m>[39m
+                  [0mSelect an answer[0m
+                [36m</option>[39m
+                [36m<option[39m
+                  [33mvalue[39m=[32m"Japanese Domestic Market"[39m
+                [36m>[39m
+                  [0mJapanese Domestic Market[0m
+                [36m</option>[39m
+                [36m<option[39m
+                  [33mvalue[39m=[32m"Jazzy Dojo Muzzler"[39m
+                [36m>[39m
+                  [0mJazzy Dojo Muzzler[0m
+                [36m</option>[39m
+                [36m<option[39m
+                  [33mvalue[39m=[32m"Jumping Demented Monkeys"[39m
+                [36m>[39m
+                  [0mJumping Demented Monkeys[0m
+                [36m</option>[39m
+              [36m</select>[39m
+            [36m</div>[39m
+            [36m<span>[39m
+              [0m❌[0m
+            [36m</span>[39m
+          [36m</div>[39m
           [36m<div />[39m
           [36m<div />[39m
           [36m<img[39m
             [33malt[39m=[32m"App Sketch"[39m
+            [33mheight[39m=[32m"750px"[39m
             [33msrc[39m=[32m"quizzer_sketch.png"[39m
           [36m/>[39m
         [36m</div>[39m
@@ -75,78 +146,11 @@ FAIL src/quizzer/Quizzer.test.tsx
       at getByText (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
       at Object.<anonymous> (src/quizzer/Quizzer.test.tsx:12:23)
 
-FAIL src/App.test.tsx
-  ● renders the course name somewhere
-
-    TestingLibraryElementError: Unable to find an element with the text: /CISC275/i. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
-
-    Ignored nodes: comments, <script />, <style />
-    [36m<body>[39m
-      [36m<div>[39m
-        [36m<div>[39m
-          [36m<div[39m
-            [33mclass[39m=[32m"Quizzer"[39m
-          [36m>[39m
-            [36m<header[39m
-              [33mclass[39m=[32m"App-header"[39m
-            [36m>[39m
-              [0mQuizzes[0m
-            [36m</header>[39m
-            [36m<ul>[39m
-              [36m<li>[39m
-                [0mSketch[0m
-              [36m</li>[39m
-              [36m<li>[39m
-                [0mOutline for quiz object[0m
-              [36m</li>[39m
-              [36m<li>[39m
-                [0mQuiz editor template[0m
-              [36m</li>[39m
-              [36m<li>[39m
-                [0mAttributes for Quiz List[0m
-              [36m</li>[39m
-            [36m</ul>[39m
-            [36m<div />[39m
-            [36m<div />[39m
-            [36m<img[39m
-              [33malt[39m=[32m"App Sketch"[39m
-              [33msrc[39m=[32m"quizzer_sketch.png"[39m
-            [36m/>[39m
-          [36m</div>[39m
-          [36m<div>[39m
-            [36m<button[39m
-              [33mclass[39m=[32m"btn btn-primary"[39m
-              [33mtype[39m=[32m"button"[39m
-            [36m>[39m
-              [0mShow/Hide Task Button[0m
-            [36m</button>[39m
-          [36m</div>[39m
-        [36m</div>[39m
-      [36m</div>[39m
-    [36m</body>[39m
-
-       5 | test("renders the course name somewhere", () => {
-       6 |     render(<App />);
-    >  7 |     const linkElement = screen.getByText(/CISC275/i);
-         |                                ^
-       8 |     expect(linkElement).toBeInTheDocument();
-       9 | });
-      10 |
-
-      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
-      at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
-      at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
-      at getByText (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
-      at Object.<anonymous> (src/App.test.tsx:7:32)
-      at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
-      at runJest (node_modules/@jest/core/build/runJest.js:404:19)
-      at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
-      at runCLI (node_modules/@jest/core/build/cli/index.js:173:3)
-
+PASS src/App.test.tsx
 -----------------------------|---------|----------|---------|---------|-------------------
 File                         | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 -----------------------------|---------|----------|---------|---------|-------------------
-All files                    |   93.68 |    96.96 |   90.72 |   93.35 |                   
+All files                    |   94.88 |    91.02 |   90.25 |   94.62 |                   
  src                         |     100 |      100 |     100 |     100 |                   
   App.tsx                    |     100 |      100 |     100 |     100 |                   
   arrays.ts                  |     100 |      100 |     100 |     100 |                   
@@ -158,13 +162,13 @@ All files                    |   93.68 |    96.96 |   90.72 |   93.35 |
   ColoredBox.tsx             |     100 |      100 |     100 |     100 |                   
   DoubleHalf.tsx             |     100 |      100 |     100 |     100 |                   
   ShoveBox.tsx               |     100 |      100 |     100 |     100 |                   
- src/components              |   81.25 |    95.23 |   70.37 |   81.25 |                   
+ src/components              |    93.1 |    95.45 |   83.33 |    93.1 |                   
   ChangeType.tsx             |     100 |      100 |     100 |     100 |                   
   Counter.tsx                |     100 |      100 |     100 |     100 |                   
   CycleHoliday.tsx           |     100 |      100 |     100 |     100 |                   
-  QuizEditor.tsx             |       0 |      100 |       0 |       0 | 17-80             
-  QuizList.tsx               |       0 |      100 |       0 |       0 | 17-20             
-  QuizView.tsx               |       0 |        0 |       0 |       0 | 16-22             
+  HideComponents.tsx         |   66.66 |       50 |      50 |   66.66 | 22                
+  QuizList.tsx               |       0 |      100 |       0 |       0 | 16-19             
+  QuizView.tsx               |       0 |      100 |       0 |       0 | 12                
   RevealAnswer.tsx           |     100 |      100 |     100 |     100 |                   
   StartAttempt.tsx           |     100 |      100 |     100 |     100 |                   
   TwoDice.tsx                |     100 |      100 |     100 |     100 |                   
@@ -178,10 +182,10 @@ All files                    |   93.68 |    96.96 |   90.72 |   93.35 |
   answer.ts                  |       0 |        0 |       0 |       0 |                   
   question.ts                |       0 |        0 |       0 |       0 |                   
   quiz.ts                    |       0 |        0 |       0 |       0 |                   
- src/quizzer                 |      75 |       50 |   66.66 |      75 |                   
-  HiddenTasks.tsx            |   66.66 |       50 |      50 |   66.66 | 68                
-  Quizzer.tsx                |     100 |      100 |     100 |     100 |                   
+ src/quizzer                 |   66.66 |    54.16 |   33.33 |   66.66 |                   
+  Quizzer.tsx                |   66.66 |    54.16 |   33.33 |   66.66 | 54,74,104-138     
 -----------------------------|---------|----------|---------|---------|-------------------
+
 Summary of all failing tests
 FAIL src/quizzer/Quizzer.test.tsx
   ● Quizzer Tests › The Quizzer renders
@@ -212,11 +216,82 @@ FAIL src/quizzer/Quizzer.test.tsx
             [36m<li>[39m
               [0mAttributes for Quiz List[0m
             [36m</li>[39m
+            [36m<li>[39m
+              [0mHide old components[0m
+            [36m</li>[39m
           [36m</ul>[39m
+          [36m<div>[39m
+            [36m<div>[39m
+              [36m<label[39m
+                [33mclass[39m=[32m"form-label"[39m
+              [36m>[39m
+                [0mSelect a Quiz[0m
+              [36m</label>[39m
+              [36m<select[39m
+                [33mclass[39m=[32m"form-select"[39m
+              [36m>[39m
+                [36m<option[39m
+                  [33mvalue[39m=[32m"JDM Cars"[39m
+                [36m>[39m
+                  [0mJDM Cars[0m
+                [36m</option>[39m
+                [36m<option[39m
+                  [33mvalue[39m=[32m"American Cars"[39m
+                [36m>[39m
+                  [0mAmerican Cars[0m
+                [36m</option>[39m
+                [36m<option[39m
+                  [33mvalue[39m=[32m"Euro Cars"[39m
+                [36m>[39m
+                  [0mEuro Cars[0m
+                [36m</option>[39m
+              [36m</select>[39m
+            [36m</div>[39m
+          [36m</div>[39m
+          [36m<div>[39m
+            [36m<div>[39m
+              [36m<label[39m
+                [33mclass[39m=[32m"form-label"[39m
+              [36m>[39m
+                [0mJDM Cars[0m
+              [36m</label>[39m
+              [36m<span>[39m
+                [0mWhat does [JDM] stand for?[0m
+              [36m</span>[39m
+              [36m<select[39m
+                [33mclass[39m=[32m"form-select"[39m
+              [36m>[39m
+                [36m<option[39m
+                  [33mvalue[39m=[32m"Select an answer"[39m
+                [36m>[39m
+                  [0mSelect an answer[0m
+                [36m</option>[39m
+                [36m<option[39m
+                  [33mvalue[39m=[32m"Japanese Domestic Market"[39m
+                [36m>[39m
+                  [0mJapanese Domestic Market[0m
+                [36m</option>[39m
+                [36m<option[39m
+                  [33mvalue[39m=[32m"Jazzy Dojo Muzzler"[39m
+                [36m>[39m
+                  [0mJazzy Dojo Muzzler[0m
+                [36m</option>[39m
+                [36m<option[39m
+                  [33mvalue[39m=[32m"Jumping Demented Monkeys"[39m
+                [36m>[39m
+                  [0mJumping Demented Monkeys[0m
+                [36m</option>[39m
+              [36m</select>[39m
+            [36m</div>[39m
+            [36m<span>[39m
+              [0m❌[0m
+            [36m</span>[39m
+          [36m</div>[39m
           [36m<div />[39m
           [36m<div />[39m
           [36m<img[39m
             [33malt[39m=[32m"App Sketch"[39m
+            [33mheight[39m=[32m"750px"[39m
             [33msrc[39m=[32m"quizzer_sketch.png"[39m
           [36m/>[39m
         [36m</div>[39m
@@ -237,77 +312,9 @@ FAIL src/quizzer/Quizzer.test.tsx
       at getByText (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
       at Object.<anonymous> (src/quizzer/Quizzer.test.tsx:12:23)
 
-FAIL src/App.test.tsx
-  ● renders the course name somewhere
 
-    TestingLibraryElementError: Unable to find an element with the text: /CISC275/i. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
-
-    Ignored nodes: comments, <script />, <style />
-    [36m<body>[39m
-      [36m<div>[39m
-        [36m<div>[39m
-          [36m<div[39m
-            [33mclass[39m=[32m"Quizzer"[39m
-          [36m>[39m
-            [36m<header[39m
-              [33mclass[39m=[32m"App-header"[39m
-            [36m>[39m
-              [0mQuizzes[0m
-            [36m</header>[39m
-            [36m<ul>[39m
-              [36m<li>[39m
-                [0mSketch[0m
-              [36m</li>[39m
-              [36m<li>[39m
-                [0mOutline for quiz object[0m
-              [36m</li>[39m
-              [36m<li>[39m
-                [0mQuiz editor template[0m
-              [36m</li>[39m
-              [36m<li>[39m
-                [0mAttributes for Quiz List[0m
-              [36m</li>[39m
-            [36m</ul>[39m
-            [36m<div />[39m
-            [36m<div />[39m
-            [36m<img[39m
-              [33malt[39m=[32m"App Sketch"[39m
-              [33msrc[39m=[32m"quizzer_sketch.png"[39m
-            [36m/>[39m
-          [36m</div>[39m
-          [36m<div>[39m
-            [36m<button[39m
-              [33mclass[39m=[32m"btn btn-primary"[39m
-              [33mtype[39m=[32m"button"[39m
-            [36m>[39m
-              [0mShow/Hide Task Button[0m
-            [36m</button>[39m
-          [36m</div>[39m
-        [36m</div>[39m
-      [36m</div>[39m
-    [36m</body>[39m
-
-       5 | test("renders the course name somewhere", () => {
-       6 |     render(<App />);
-    >  7 |     const linkElement = screen.getByText(/CISC275/i);
-         |                                ^
-       8 |     expect(linkElement).toBeInTheDocument();
-       9 | });
-      10 |
-
-      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
-      at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
-      at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
-      at getByText (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
-      at Object.<anonymous> (src/App.test.tsx:7:32)
-      at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
-      at runJest (node_modules/@jest/core/build/runJest.js:404:19)
-      at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
-      at runCLI (node_modules/@jest/core/build/cli/index.js:173:3)
-
-
-Test Suites: 2 failed, 19 passed, 21 total
-Tests:       2 failed, 133 passed, 135 total
+Test Suites: 1 failed, 20 passed, 21 total
+Tests:       1 failed, 134 passed, 135 total
 Snapshots:   0 total
-Time:        10.871 s
+Time:        14.391 s
 Ran all test suites.
