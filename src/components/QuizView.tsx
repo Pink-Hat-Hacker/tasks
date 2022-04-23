@@ -3,9 +3,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import { Quiz } from "../interfaces/quiz";
 
 export function QuizView({
-    quiz,
-    deleteQuiz,
-    editQuiz
+    quiz
 }: {
     quiz: Quiz;
     deleteQuiz: (id: string) => void;
