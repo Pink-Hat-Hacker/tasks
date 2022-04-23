@@ -41,13 +41,16 @@ export function Quizzer(): JSX.Element {
                 <li>Quiz editor template</li>
                 <li>Attributes for Quiz List</li>
                 <li>Hide old components</li>
+                <li>3 Quizzes</li>
             </ul>
             {/* <div>
                 <QuizList quizzes={quiz} deleteQuiz={deleteQuiz}></QuizList>
             </div> */}
             <div>
                 <Form.Group>
-                    <Form.Label>Select a Quiz</Form.Label>
+                    <Form.Label>
+                        <strong>Select a Quiz</strong>
+                    </Form.Label>
                     <Form.Select
                         value={quiz_t}
                         onChange={(event: ChangeEvent) =>
@@ -66,8 +69,10 @@ export function Quizzer(): JSX.Element {
             <div>
                 {quiz_t === quizTitles[0] && (
                     <Form.Group>
-                        <Form.Label>{quiz_t}</Form.Label>
-                        <span>What does [JDM] stand for?</span>
+                        <Form.Label>{quiz_t}: </Form.Label>
+                        <span>
+                            <strong>What does [JDM] stand for?</strong>
+                        </span>
                         <Form.Select
                             value={jdmAs}
                             onChange={(event: ChangeEvent) =>
@@ -93,10 +98,11 @@ export function Quizzer(): JSX.Element {
             <div>
                 {quiz_t === quizTitles[1] && (
                     <Form.Group>
-                        <Form.Label>{quiz_t}</Form.Label>
+                        <Form.Label>{quiz_t}: </Form.Label>
                         <span>
-                            What American muscle car model is now an electric
-                            SUV?
+                            <strong>
+                                What American muscle car model is now an SUV?
+                            </strong>
                         </span>
                         <Form.Select
                             value={amerAs}
@@ -123,10 +129,12 @@ export function Quizzer(): JSX.Element {
             <div>
                 {quiz_t === quizTitles[2] && (
                     <Form.Group>
-                        <Form.Label>{quiz_t}</Form.Label>
+                        <Form.Label>{quiz_t}: </Form.Label>
                         <span>
-                            What classic European car looks like a Datsun 2000
-                            Roadster?
+                            <strong>
+                                What classic European car looks like a Datsun
+                                Roadster?
+                            </strong>
                         </span>
                         <Form.Select
                             value={euroAs}
