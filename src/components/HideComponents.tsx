@@ -24,7 +24,7 @@ export function HideComponents(): JSX.Element {
     return (
         <div>
             <Button onClick={changeVisible}>
-                {visible ? "Hide" : "Show"} Old Components
+                {visible ? "Hide" : "Show"} Old Tasks
             </Button>
             {visible && (
                 <div>
