@@ -316,5 +316,5 @@ FAIL src/quizzer/Quizzer.test.tsx
 Test Suites: 1 failed, 20 passed, 21 total
 Tests:       1 failed, 134 passed, 135 total
 Snapshots:   0 total
-Time:        14.391 s
+Time:        18.249 s
 Ran all test suites.
