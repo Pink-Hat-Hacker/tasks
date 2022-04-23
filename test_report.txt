@@ -53,13 +53,18 @@ FAIL src/quizzer/Quizzer.test.tsx
             [36m<li>[39m
               [0mHide old components[0m
             [36m</li>[39m
+            [36m<li>[39m
+              [0m3 Quizzes[0m
+            [36m</li>[39m
           [36m</ul>[39m
           [36m<div>[39m
             [36m<div>[39m
               [36m<label[39m
                 [33mclass[39m=[32m"form-label"[39m
               [36m>[39m
-                [0mSelect a Quiz[0m
+                [36m<strong>[39m
+                  [0mSelect a Quiz[0m
+                [36m</strong>[39m
               [36m</label>[39m
               [36m<select[39m
                 [33mclass[39m=[32m"form-select"[39m
@@ -88,9 +93,12 @@ FAIL src/quizzer/Quizzer.test.tsx
                 [33mclass[39m=[32m"form-label"[39m
               [36m>[39m
                 [0mJDM Cars[0m
+                [0m: [0m
               [36m</label>[39m
               [36m<span>[39m
-                [0mWhat does [JDM] stand for?[0m
+                [36m<strong>[39m
+                  [0mWhat does [JDM] stand for?[0m
+                [36m</strong>[39m
               [36m</span>[39m
               [36m<select[39m
                 [33mclass[39m=[32m"form-select"[39m
@@ -183,7 +191,7 @@ All files                    |   94.88 |    91.02 |   90.25 |   94.62 |
   question.ts                |       0 |        0 |       0 |       0 |                   
   quiz.ts                    |       0 |        0 |       0 |       0 |                   
  src/quizzer                 |   66.66 |    54.16 |   33.33 |   66.66 |                   
-  Quizzer.tsx                |   66.66 |    54.16 |   33.33 |   66.66 | 54,74,104-138     
+  Quizzer.tsx                |   66.66 |    54.16 |   33.33 |   66.66 | 57,79,110-146     
 -----------------------------|---------|----------|---------|---------|-------------------
 
 Summary of all failing tests
@@ -219,13 +227,18 @@ FAIL src/quizzer/Quizzer.test.tsx
             [36m<li>[39m
               [0mHide old components[0m
             [36m</li>[39m
+            [36m<li>[39m
+              [0m3 Quizzes[0m
+            [36m</li>[39m
           [36m</ul>[39m
           [36m<div>[39m
             [36m<div>[39m
               [36m<label[39m
                 [33mclass[39m=[32m"form-label"[39m
               [36m>[39m
-                [0mSelect a Quiz[0m
+                [36m<strong>[39m
+                  [0mSelect a Quiz[0m
+                [36m</strong>[39m
               [36m</label>[39m
               [36m<select[39m
                 [33mclass[39m=[32m"form-select"[39m
@@ -254,9 +267,12 @@ FAIL src/quizzer/Quizzer.test.tsx
                 [33mclass[39m=[32m"form-label"[39m
               [36m>[39m
                 [0mJDM Cars[0m
+                [0m: [0m
               [36m</label>[39m
               [36m<span>[39m
-                [0mWhat does [JDM] stand for?[0m
+                [36m<strong>[39m
+                  [0mWhat does [JDM] stand for?[0m
+                [36m</strong>[39m
               [36m</span>[39m
               [36m<select[39m
                 [33mclass[39m=[32m"form-select"[39m
@@ -316,5 +332,5 @@ FAIL src/quizzer/Quizzer.test.tsx
 Test Suites: 1 failed, 20 passed, 21 total
 Tests:       1 failed, 134 passed, 135 total
 Snapshots:   0 total
-Time:        18.249 s
+Time:        14.453 s
 Ran all test suites.
